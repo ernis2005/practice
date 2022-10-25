@@ -80,12 +80,12 @@ function Menu() {
             </div>
            
             <div className={s.Instagram}>
-              <a className={s.a} href="#">
+              {/* <a className={s.a} href="#">
                 <AiOutlineGooglePlus />
               </a>
               <a href="#">
                 <AiOutlineInstagram />
-              </a>
+              </a> */}
               <a href="#">
                 <CiTwitter />
               </a>
