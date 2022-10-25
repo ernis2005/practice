@@ -1,10 +1,10 @@
-import { IconButton } from "@mui/material";
+
 import Image from "next/image";
 import React, { useState } from "react";
 import s from "./Menu.module.scss";
 import MenuIcon from "@mui/icons-material/Menu";
-import { AiOutlineGooglePlus } from "react-icons/ai";
-import { AiOutlineInstagram } from "react-icons/ai";
+// import { AiOutlineGooglePlus } from "react-icons/ai";
+// import { AiOutlineInstagram } from "react-icons/ai";
 import { CiTwitter } from "react-icons/ci";
 import { CiFacebook } from "react-icons/ci";
 import { TbMail } from "react-icons/tb";
