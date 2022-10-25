@@ -1,0 +1,82 @@
+.bbtn {
+  display: none;
+
+  position: absolute;
+  transition: 1s;
+  background-color: black;
+}
+.btn {
+  background-color: #b44100;
+  width: 100%;
+
+  margin: 0;
+
+  justify-content: center;
+  animation: ernis 0.5s;
+}
+.menu {
+  justify-content: space-between;
+  display: flex;
+  position: relative;
+}
+
+.button {
+  border: none;
+  background-color: rgba(0, 0, 139, 0);
+  color: white;
+}
+.menus {
+  justify-content: center;
+  display: block;
+  text-align: center;
+  .menu3 {
+    font-size: 20px;
+    margin: 0;
+    a {
+      margin-top: 15px;
+    }
+  }
+}
+.language {
+  display: flex;
+  gap: 10px;
+  button {
+    background-color: #b4420000;
+    color: rgba(255, 255, 255, 0.418);
+    border: none;
+    &:active {
+      color: white;
+    }
+  }
+}
+.menu1_block {
+  display: flex;
+}
+.block_menu_info {
+  margin-top: 10px;
+}
+.block_menu1 {
+  margin-left: 15px;
+  margin-top: 30px;
+}
+@media screen and (max-width: 470px) {
+  .menu1_block {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+}
+.Instagram {
+  margin-top: 30px;
+  a {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+}
+.IconButton {
+  width: 40px;
+  height: 40px;
+}
+.menu {
+  justify-content: space-around;
+  max-width: 1500px;
+}
