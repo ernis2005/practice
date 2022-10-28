@@ -1,0 +1,39 @@
+.box{
+   
+    padding: 0;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    justify-content: space-evenly;
+
+    
+}
+.tabs{
+    width: 300px;
+    background-color: rgba(51, 51, 51, 0.087);
+    border-radius: 10px;
+    height: 350px;
+}
+.TabPanel{
+    max-width: 700px;
+}
+
+@media screen and ( max-width:1014px) {
+    .tabs{
+        width: 200px;
+    }
+}
+
+@media screen and ( max-width:952px) {
+    .box{
+        margin-top: 400px;
+    }
+    .TabPanel{
+        max-width: 500px;
+    }
+    
+}
+
+@media screen and ( max-width:845px){
+
+}

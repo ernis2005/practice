@@ -1,23 +1,53 @@
 .bbtn {
   display: none;
 
-  position: absolute;
+  position: fixed;
   transition: 1s;
   background-color: black;
 }
 .btn {
   background-color: #b44100;
-  width: 100%;
-
+  width: 110%;
+  position: fixed;
   margin: 0;
-
+height: 1500px;
+  
   justify-content: center;
   animation: ernis 0.5s;
+}
+
+.menu_summary{
+  display: block;
+  padding-top: 5px;
+  width: 100px;
+  background-color: #b44200;
+margin: 0 auto;
+  p{
+    transition: 0.5s;
+    font-size: 20px;
+  &:hover{
+    background-color: #ffffff;
+  
+    padding: 10px;
+    transform: rotate(1.1);
+    color: black;
+    border-radius: 5px;
+  }
+  }
 }
 .menu {
   justify-content: space-between;
   display: flex;
-  position: relative;
+  
+}
+.menusss{
+position: fixed;
+background-color: #b44100;
+margin-top: -10px;
+margin-left: -20px;
+z-index: 1000;
+width: 103%;
+
 }
 
 .button {
@@ -26,14 +56,16 @@
   color: white;
 }
 .menus {
-  justify-content: center;
+  justify-content: space-between;
   display: block;
   text-align: center;
+  overflow-y: scroll;
+ height: 300px;
   .menu3 {
     font-size: 20px;
     margin: 0;
     a {
-      margin-top: 15px;
+      margin-top: 50px;
     }
   }
 }
@@ -59,12 +91,21 @@
   margin-left: 15px;
   margin-top: 30px;
 }
+@media screen and (max-width: 564px) {
+  .language {
+    display: none;
+  }
+}
 @media screen and (max-width: 470px) {
   .menu1_block {
     display: grid;
     grid-template-columns: 2fr 2fr;
   }
+  .language{
+    font-size: 10px;
+  }
 }
+
 .Instagram {
   margin-top: 30px;
   a {
@@ -75,6 +116,7 @@
 .IconButton {
   width: 40px;
   height: 40px;
+  margin-top: 20px;
 }
 .menu {
   justify-content: space-around;

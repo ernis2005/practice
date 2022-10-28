@@ -3,17 +3,18 @@ import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { AiOutlineGooglePlus } from "react-icons/ai";
+import { AiOutlineEye, AiOutlineGooglePlus } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
-import { CiTwitter } from "react-icons/ci";
+import { CiPlay1, CiTwitter } from "react-icons/ci";
 import { CiFacebook } from "react-icons/ci";
 import { TbMail } from "react-icons/tb";
-import { BsTelephone } from "react-icons/bs";
+import { BsPlay, BsTelephone } from "react-icons/bs";
 import { FiMapPin } from "react-icons/fi";
 import { SlArrowRight } from "react-icons/sl";
-import { CiPlay1 } from "react-icons/ci";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper";
+
+
+import sections from './Scrollspy/sections'
+import { CiCalendarDate } from "react-icons/ci";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -28,6 +29,7 @@ export default function Home({ data }) {
   const currentCounter = data.slice(firstCounteryIndex, lastCountryIndex);
   const paginate = (pages) => setCurrentPage(pages);
   return (
+    
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -36,768 +38,808 @@ export default function Home({ data }) {
       </Head>
 
       <header className={styles.header}>
-     
-        <div className={styles.header_block1}>
-        <div className={styles.menu3}>
-        <div className={styles.menu_burger}>
-            <Menu />
-          </div>
-          <div className={styles.menus}>
-            <div className={styles.menu}>
-              <div className={styles.Instagram}>
-               
-                  <AiOutlineGooglePlus />
-             
-                  <AiOutlineInstagram  href="#"/>
-                
-           
-                  <CiTwitter />
-                
-       
-                  <CiFacebook />
-              
-              </div>
-              <div className={styles.info_menu}>
-                <a href="#">РЕКТОРАТ</a>
-                <a href="#">И.АРАБАЕВ - ПЕРВЫЙ УЧИТЕЛЬ</a>
-                <a href="#">ФОТОГАЛЕРЕЯ</a>
-                <a href="#">ВЕСТНИК КГУ</a>
-                <a href="#">ПРЕСС-СЛУЖБА</a>
-              </div>
-              <div className={styles.language}>
-                <button className={styles.btn}>RUS</button>
-                <button className={styles.btn}>KG</button>
-                <button className={styles.btn}>ENG</button>
-              </div>
-            </div>
-            <div className={styles.menu1}>
-              <div>
-                <Image width={300} height={100} src="/logo.png" alt="q" />
-              </div>
-              <div className={styles.menu1_block}>
-                <div className={styles.block_menu1}>
-                  <BsTelephone className={styles.TbMail} />
-                  <div className={styles.block_menu_info}>
-                    <p>приемная ректора</p>
-                    <a href="tel:+312 66 03 47">+312 66 03 47</a>
-                  </div>
-                </div>
-                <div className={styles.block_menu1}>
-                  <TbMail className={styles.TbMail} />
-                  <div className={styles.block_menu_info}>
-                    <p>email</p>
-                    <a href="mailto:i.arabaev@mail.ru">i.arabaev@mail.ru</a>
-                  </div>
-                </div>
-                <div className={styles.block_menu1}>
-                  <FiMapPin className={styles.TbMail} />
-                  <div className={styles.block_menu_info}>
-                    <h4>адрес</h4>
-                    <a href="#">720026, г.Бишкек, ул. Раззакова 51а</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className={styles.menu3}>
-                <a href="#">ГЛАВНАЯ</a>
-                <details>
-                  <summary>О НАС</summary>
-                  <a href="#">hsasas</a>
-                </details>
-                <details>
-                  <summary>ОБРАЗОВАНИЕ</summary>
-                </details>
-                <details>
-                  <summary>НАУКА</summary>
-                </details>
-                <details>
-                  <summary>МЕЖДУНАРОДНАЯ ДЕЯТЕЛЬНОСТЬ</summary>
-                </details>
-                <details>
-                  <summary>АБИТУРИЕНТАМ</summary>
-                </details>
-                <details>
-                  <summary>СТУДЕНЧЕСКАЯ ЖИЗНЬ</summary>
-                </details>
 
-                <a href="#">КОНТАКТЫ</a>
-              </div>
-            </div>
-          </div>
-        </div>
-         
-        </div>
       
         <div className={styles.header_content}>
-         
-          
-             <div>
-              <div className={styles.header_content_block2}>
-                <p>ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ</p>
-                <hr />
-                <p>ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ</p>
-                <hr />
-                <p>ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ</p>
-                <hr />
-                <p>ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ</p>
-                <hr />
-                <p>ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ</p>
-                <hr />
-                <p>ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ</p>
-                <hr />
-                <p>ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ</p>
-                <hr />
-                <p>ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ</p>
-                <hr />
-                <p>ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ</p>
-                <hr />
-                <p>ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ</p>
-                <hr />
-                <p>ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ</p>
-                <hr />
-                <p>ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ</p>
-              </div>
-              <div className={styles.custom}>
-  <div id="front_videos">
-    <div className={styles.large_2}>
-      <div className={styles.force_overflow}></div>
-    </div>
-  </div>
+
+          <div className={styles.header_content_block22} >
+            <Image src="/img4.jpg" alt="img"
+              objectFit="cover"
+              className={styles.header_content_block22_img}
+              layout="fill"
+            />
+            <div>
+            <div className={styles.header_content_block22_info}>
+
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, expedita temporibus. Modi? Lorem ipsum, dolor 
+</p>
+<div>
+  <p>
+    <CiCalendarDate />
+    2002 15 04
+  </p>
+  <p>
+    <AiOutlineEye />
+    999
+  </p>
+</div>
+
 </div>
             </div>
-            <div >
-              <Swiper
-                pagination={{
-                  dynamicBullets: true,
-                }}
-                modules={[Pagination, Autoplay]}
-                autoplay={{
-                  delay: 5000,
-                  disableOnInteraction: false,
-                }}
-                className={styles.mySwiper}
-              >
-                <SwiperSlide>
-                  <Image  
-                   layout="fill"
-        
-                   objectFit="cover"
-                  className={styles.img_header} src="/img2.jpg" alt="q" />
-                </SwiperSlide>
-                <SwiperSlide>
-                <Image
-                
-                layout="fill"
-        
-                objectFit="cover"className={styles.img_header} src="/img2.jpg" alt="q"/>
-                </SwiperSlide>
-              </Swiper>
-            </div>
+         
+          </div>
+         
+          <div>
+            <div className={styles.header_content_block2}
 
-   
+            >
+              {sections.map((section, i) => (
+                <div className={styles.sections} key={section.id}>
+                  <div>    <p><CiCalendarDate /> {section.the_date}</p> <p><AiOutlineEye />{section.AiOutlineEye}</p></div>
+
+                  <a className={styles.sections_a} href={'#'}>
+                    {section.info}</a>
+                </div>
+              ))}
+            </div>
+            <button className={styles.header_content_block2_button}> Все новости</button>
+          </div>
         </div>
       </header>
-      
-
-        
-
        <div className={styles.info_block}>
+        <div className={styles.info_blockk}>
         <div>
-          
-        </div>
-          <div className={styles.info_block_h1}>
-            <span></span>
-            <h1>
-              Победители и <br></br>
-              призеры онлайн<br></br>
-              олимпиады<br></br>
-            </h1>
-          </div>
-          <div className={styles.info_block_h1}>
-            <span></span>
-            <h1>
-              Институты и<br />
-              факультеты КГУ
-              <br />
-              им. И.Арабаева
-              <br />
-            </h1>
-          </div>
-          <div className={styles.info_block_h1}>
-            <span></span>
-            <h1>
-              Условие <br />
-              проведения
-              <br />
-              онлайн олимпиады <br />
-            </h1>
-          </div>
-          <div className={styles.STOP}>
-            <p>
-              STOP <br />
-              КОРРУПЦИЯ
-            </p>
-          </div>
-        </div>
-        <div>
-          <div className={styles.content}>
-            <div className={styles.content_BLOCK}>
-              <div className={styles.content_BLOCK_block}>
-                <div>
-                  <h3>АРАБАЕВ ПРЕСС</h3>
-                </div>
-                <div className={styles.content_BLOCK_block_div2}></div>
-                <p>№013 01 / МАРТ / 2022-ЖЫЛ</p>
-              </div>
-              <div className={styles.content_BLOCK_block}>
-                <div>
-                  <h3>ЖАРЧЫ</h3>
-                </div>
-                <div className={styles.content_BLOCK_block_div2}></div>
-                <p>№013 01 / МАРТ / 2022-ЖЫЛ</p>
-              </div>
-            </div>
-            <div  className={styles.content_BLOCK3}>
-              <div  >
-                {currentCounter.map((res) => {
-                  return (
-                    <div key={res.id} >
-                      <div className={styles.map_card}>
-                        <div className={styles.map_card_block1}></div>
-                        <div className={styles.map_card_block2}>
-                          <h2>ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕР</h2>
-                          <h3>{res.name}</h3>
 
-                          <p>2022 10 06</p>
-                        </div>
+</div>
+<div className={styles.info_block_h1}>
+  <span></span>
+  <h1>
+    Победители и <br></br>
+    призеры онлайн<br></br>
+    олимпиады<br></br>
+  </h1>
+</div>
+<div className={styles.info_block_h1}>
+  <span></span>
+  <h1>
+    Институты и<br />
+    факультеты КГУ
+    <br />
+    им. И.Арабаева
+    <br />
+  </h1>
+</div>
+<div className={styles.info_block_h1}>
+  <span></span>
+  <h1>
+    Условие <br />
+    проведения
+    <br />
+    онлайн олимпиады <br />
+  </h1>
+</div>
+<div className={styles.STOP}>
+  <p>
+    STOP <br />
+    КОРРУПЦИЯ
+  </p>
+</div>
+        </div>
+      
+      </div>
+       <div>
+        <div className={styles.content}>
+          <div className={styles.content_BLOCK}>
+            <div className={styles.content_BLOCK_block}>
+              <div>
+                <h3>АРАБАЕВ </h3>
+              </div>
+              <div className={styles.content_BLOCK_block_div2}><Image src="/img4.jpg" alt="img"
+                objectFit="cover"
+                className={styles.content_BLOCK_block_div2_img}
+                layout="fill"
+              /></div>
+              <p>№013 01 / МАРТ / 2022-ЖЫЛ</p>
+            </div>
+            <div className={styles.content_BLOCK_block}>
+              <div>
+                <h3>ЖАРЧЫ</h3>
+              </div>
+              <div className={styles.content_BLOCK_block_div2}><Image src="/img4.jpg" alt="img"
+                objectFit="cover"
+                className={styles.content_BLOCK_block_div2_img}
+                layout="fill"
+              /></div>
+              <p>№013 01 / МАРТ / 2022-ЖЫЛ</p>
+            </div>
+          </div>
+         <div className={styles.content_BLOCK3}>
+            <div  >
+              {currentCounter.map((res) => {
+                return (
+                  <div key={res.id} >
+                    <div className={styles.map_card}>
+                      <div className={styles.map_card_block1}><Image src="/img4.jpg" alt="img"
+                        objectFit="cover"
+                        className={styles.content_BLOCK_block_div2_img}
+                        layout="fill"
+                      /></div>
+                      <div className={styles.map_card_block2}>
+                        <h2>ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕР</h2>
+                        <h3>{res.name}</h3>
+
+                        <p>2022 10 06</p>
                       </div>
                     </div>
-                  );
-                })}
-              </div>
-              <Paginatin
-                currentPege={counteriesPerPage}
-                totalCount={data.length}
-                paginate={paginate}
-              className={styles.Paginatin}
-              />
+                  </div>
+                );
+              })}
             </div>
-            <div className={styles.content_BLOCK_2}>
-              <div className={styles.content_BLOCK_2_block}>
-                
-                <div>
-                  <h1>АKNpress</h1>
-                </div>
-                <div className={styles.content_BLOCK_block2}>
+            <Paginatin
+              currentPege={counteriesPerPage}
+              totalCount={data.length}
+              paginate={paginate}
+              className={styles.Paginatin}
+            />
+          </div>
+          <div className={styles.content_BLOCK_2}>
+            <div className={styles.content_BLOCK_2_block}>
+
+              <div>
+                <h1>АKNpress</h1>
+              </div>
+              <div className={styles.content_BLOCK_block2}>
                 <p className={styles.content_BLOCK_block2_p1}>
-                  ПОРТАЛ ДИСТАНЦИОННОГО ОБУЧЕНИЯ{" "}
+                  ПОРТАЛ ДИСТАНЦИОННОГО ОБУЧЕНИЯ
                 </p>
                 <h2 className={styles.content_BLOCK_block2_h2}>AVN SOFT</h2>
               </div>
-              </div>
-             
-              <div className={styles.content_BLOCK_block3}>
-                <div className={styles.content_BLOCK_block3_div}>
-                  <p>КАТЕГОРИИ</p>
-                </div>
-                <div>
-                  <p>
+            </div>
 
-                    НОВОСТИ И ОБЪЯВЛЕНИЯ
-                  </p>
-                  <p>
+            <div className={styles.content_BLOCK_block3}>
+              <div className={styles.content_BLOCK_block3_div}>
+                <p>КАТЕГОРИИ</p>
+              </div>
+              <div>
+                <p>
 
-                    НОВОСТИ И ОБЪЯВЛЕН
-                  </p>
-                  <p>
+                  НОВОСТИ И ОБЪЯВЛЕНИЯ
+                </p>
+                <p>
 
-                    НОВОСТИ
-                  </p>
-                  <p>
-                    <div className={styles.content_BLOCK_block3_div_span}></div>{" "}
-                    НОВОСТИ
-                  </p>
-                </div>
-              </div>
-              <div className={styles.ssss}>
-                <div className={styles.content_BLOCK_block3_div2}>
-                  <p>ПОЛЕЗНЫЕ ССЫЛКИ</p>
-                </div>
+                  НОВОСТИ И ОБЪЯВЛЕН
+                </p>
+                <p>
 
-                <div className={styles.content_BLOCK_block3_p}>
-                  <p>МОИН</p>
-                  <p>МОИН</p>
-                  <p>МОИН</p>
-                  <p>МОИН</p>
-                  <p>МОИН</p>
-                  <p>МОИН</p>
-                  <p>МОИН</p>
-                </div>
+                  НОВОСТИ
+                </p>
+                <p>
+                  <span className={styles.content_BLOCK_block3_div_span}></span>{" "}
+                  НОВОСТИ
+                </p>
               </div>
             </div>
-          </div>
-         <div className={styles.content_BLOCK_3}>
-          <div className={styles.content_BLOCK_3_cards}>
-          <div className={styles.content_BLOCK_we}></div>
-            <div className={styles.content_BLOCK_we}></div>
-            <div className={styles.content_BLOCK_we}></div>
-            <div className={styles.content_BLOCK_we}></div>
-          </div>
-           
-          </div>
-           <div className={styles.content_BLOCK_4}>
-            <div className={styles.content_BLOCK_5}>
-              <div className={styles.content_BLOCK_5_block}>
-                <p>МААНИЛЇЇ МАТЕРИАЛДАР</p>
+            <div className={styles.ssss}>
+              <div className={styles.content_BLOCK_block3_div2}>
+                <p>ПОЛЕЗНЫЕ ССЫЛКИ</p>
               </div>
-              <div className={styles.content_BLOCK_5_block_cards}>
-                <div className={styles.content_BLOCK_5_block_card}>
-                  <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
-                  <div className={styles.content_BLOCK_5_block_card_date}>
-                    <p>2022-03-17</p>
-                    <p>94 ПРОСМОТРЫ</p>
-                  </div>
-                </div>
-                <div className={styles.content_BLOCK_5_block_card}>
-                  <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
-                  <div className={styles.content_BLOCK_5_block_card_date}>
-                    <p>2022-03-17</p>
-                    <p>94 ПРОСМОТРЫ</p>
-                  </div>
-                </div>
-                <div className={styles.content_BLOCK_5_block_card}>
-                  <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
-                  <div className={styles.content_BLOCK_5_block_card_date}>
-                    <p>2022-03-17</p>
-                    <p>94 ПРОСМОТРЫ</p>
-                  </div>
-                </div>
-                <div className={styles.content_BLOCK_5_block_card}>
-                  <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
-                  <div className={styles.content_BLOCK_5_block_card_date}>
-                    <p>2022-03-17</p>
-                    <p>94 ПРОСМОТРЫ</p>
-                  </div>
-                  <div className={styles.content_BLOCK_5_block_card_w}>
-                    <p>ЕЩЕ БОЛЬШЕ НОВОСТЕЙ</p>
-                    <SlArrowRight className={styles.SlArrowRight} />
-                  </div>
-                </div>
+
+              <div className={styles.content_BLOCK_block3_p}>
+                <p>МОИН</p>
+                <p>МОИН</p>
+                <p>МОИН</p>
+                <p>МОИН</p>
+                <p>МОИН</p>
+                <p>МОИН</p>
+                <p>МОИН</p>
               </div>
             </div>
-            <div className={styles.content_BLOCK_5}>
-              <div className={styles.content_BLOCK_5_block}>
-                <p>МААНИЛЇЇ МАТЕРИАЛДАР</p>
-              </div>
-              <div className={styles.content_BLOCK_5_block_cards}>
-                <div className={styles.content_BLOCK_5_block_card}>
-                  <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
-                  <div className={styles.content_BLOCK_5_block_card_date}>
-                    <p>2022-03-17</p>
-                    <p>94 ПРОСМОТРЫ</p>
-                  </div>
-                </div>
-                <div className={styles.content_BLOCK_5_block_card}>
-                  <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
-                  <div className={styles.content_BLOCK_5_block_card_date}>
-                    <p>2022-03-17</p>
-                    <p>94 ПРОСМОТРЫ</p>
-                  </div>
-                </div>
-                <div className={styles.content_BLOCK_5_block_card}>
-                  <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
-                  <div className={styles.content_BLOCK_5_block_card_date}>
-                    <p>2022-03-17</p>
-                    <p>94 ПРОСМОТРЫ</p>
-                  </div>
-                </div>
-                <div className={styles.content_BLOCK_5_block_card}>
-                  <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
-                  <div className={styles.content_BLOCK_5_block_card_date}>
-                    <p>2022-03-17</p>
-                    <p>94 ПРОСМОТРЫ</p>
-                  </div>
-                  <div className={styles.content_BLOCK_5_block_card_w}>
-                    <p>ЕЩЕ БОЛЬШЕ НОВОСТЕЙ</p>
-                    <SlArrowRight className={styles.SlArrowRight} />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.content_BLOCK_5}>
-              <div className={styles.content_BLOCK_5_block}>
-                <p>МААНИЛЇЇ МАТЕРИАЛДАР</p>
-              </div>
-              <div className={styles.content_BLOCK_5_block_cards}>
-                <div className={styles.content_BLOCK_5_block_card}>
-                  <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
-                  <div className={styles.content_BLOCK_5_block_card_date}>
-                    <p>2022-03-17</p>
-                    <p>94 ПРОСМОТРЫ</p>
-                  </div>
-                </div>
-                <div className={styles.content_BLOCK_5_block_card}>
-                  <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
-                  <div className={styles.content_BLOCK_5_block_card_date}>
-                    <p>2022-03-17</p>
-                    <p>94 ПРОСМОТРЫ</p>
-                  </div>
-                </div>
-                <div className={styles.content_BLOCK_5_block_card}>
-                  <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
-                  <div className={styles.content_BLOCK_5_block_card_date}>
-                    <p>2022-03-17</p>
-                    <p>94 ПРОСМОТРЫ</p>
-                  </div>
-                </div>
-                <div className={styles.content_BLOCK_5_block_card}>
-                  <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
-                  <div className={styles.content_BLOCK_5_block_card_date}>
-                    <p>2022-03-17</p>
-                    <p>94 ПРОСМОТРЫ</p>
-                  </div>
-                  <div className={styles.content_BLOCK_5_block_card_w}>
-                    <p>ЕЩЕ БОЛЬШЕ НОВОСТЕЙ</p>
-                    <SlArrowRight className={styles.SlArrowRight} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-           <div className={styles.content_BLOCK_6}>
-            <h3 className={styles.h3}>НАШИ ИНСТИТУТЫ И ФАКУЛЬТЕТЫ</h3>
-            <div className={styles.content_BLOCK_6_catds}>
-              <div className={styles.content_BLOCK_6_catd}>
-                <div className={styles.content_BLOCK_6_catd_img}></div>
-                <p>
-                  Наши
-                  <br />
-                  институты и
-                </p>
-                <div></div>
-              </div>
-              <div className={styles.content_BLOCK_6_catd}>
-                <div className={styles.content_BLOCK_6_catd_img}></div>
-                <p>
-                  Наши
-                  <br />
-                  институты и
-                </p>
-                <div></div>
-              </div>{" "}
-              <div className={styles.content_BLOCK_6_catd}>
-                <div className={styles.content_BLOCK_6_catd_img}></div>
-                <p>
-                  Наши
-                  <br />
-                  институты и
-                </p>
-                <div></div>
-              </div>{" "}
-              <div className={styles.content_BLOCK_6_catd}>
-                <div className={styles.content_BLOCK_6_catd_img}></div>
-                <p>
-                  Наши
-                  <br />
-                  институты и
-                </p>
-                <div></div>
-              </div>{" "}
-              <div className={styles.content_BLOCK_6_catd}>
-                <div className={styles.content_BLOCK_6_catd_img}></div>
-                <p>
-                  Наши
-                  <br />
-                  институты и
-                </p>
-                <div></div>
-              </div>{" "}
-              <div className={styles.content_BLOCK_6_catd}>
-                <div className={styles.content_BLOCK_6_catd_img}></div>
-                <p>
-                  Наши
-                  <br />
-                  институты и
-                </p>
-                <div></div>
-              </div>{" "}
-              <div className={styles.content_BLOCK_6_catd}>
-                <div className={styles.content_BLOCK_6_catd_img}></div>
-                <p>
-                  Наши
-                  <br />
-                  институты и
-                </p>
-                <div></div>
-              </div>{" "}
-              <div className={styles.content_BLOCK_6_catd}>
-                <div className={styles.content_BLOCK_6_catd_img}></div>
-                <p>
-                  Наши
-                  <br />
-                  институты и
-                </p>
-                <div></div>
-              </div>{" "}
-              <div className={styles.content_BLOCK_6_catd}>
-                <div className={styles.content_BLOCK_6_catd_img}></div>
-                <p>
-                  Наши
-                  <br />
-                  институты и
-                </p>
-                <div></div>
-              </div>{" "}
-              <div className={styles.content_BLOCK_6_catd}>
-                <div className={styles.content_BLOCK_6_catd_img}></div>
-                <p>
-                  Наши
-                  <br />
-                  институты и
-                </p>
-                <div></div>
-              </div>{" "}
-              <div className={styles.content_BLOCK_6_catd}>
-                <div className={styles.content_BLOCK_6_catd_img}></div>
-                <p>
-                  Наши
-                  <br />
-                  институты и
-                </p>
-                <div></div>
-              </div>{" "}
-              <div className={styles.content_BLOCK_6_catd}>
-                <div className={styles.content_BLOCK_6_catd_img}></div>
-                <p>
-                  Наши
-                  <br />
-                  институты и
-                </p>
-                <div></div>
-              </div>
-            </div>
-          </div>
-          <div className={styles.content_BLOCK_7}>
-            <div className={styles.content_BLOCK_7_block}>
-              <div className={styles.content_BLOCK_7_block_p}>
-                <p>ТЕЛЕСТУДИЯ SAN</p>
-              </div>
-              <div className={styles.content_BLOCK_7_block_cards}>
-                <div>
-                  <div>
-                    <CiPlay1 className={styles.AiOutlinePauseCircle} />
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <CiPlay1 className={styles.AiOutlinePauseCircle} />
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <CiPlay1 className={styles.AiOutlinePauseCircle} />
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <CiPlay1 className={styles.AiOutlinePauseCircle} />
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <CiPlay1 className={styles.AiOutlinePauseCircle} />
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <CiPlay1 className={styles.AiOutlinePauseCircle} />
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <CiPlay1 className={styles.AiOutlinePauseCircle} />
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <CiPlay1 className={styles.AiOutlinePauseCircle} />
-                  </div>
-                </div>
-              </div>
-              <div className={styles.content_BLOCK_7_cards_info}>
-                <p>ЕЩЕ БОЛЬШЕ НОВОСТЕЙ</p>
-                <SlArrowRight className={styles.SlArrowRight_2} />
-              </div>
-            </div>
-            <div className={styles.content_BLOCK_8}>
-              <div className={styles.content_BLOCK_8_block_p}>
-                <p>ТЕЛЕСТУДИЯ SAN</p>
-              </div>
-              <div className={styles.content_BLOCK_8_block_cards}>
-                <div className={styles.content_BLOCK_8_block_card}>
-                  <div className={styles.content_BLOCK_8_block_card_img}></div>
-                  <div className={styles.content_BLOCK_8_block_card_info}>
-                    <p>
-                      ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ
-                      ВСЕМИРНОМУ ДНЮ СЛУХА
-                    </p>
-                    <div>
-                      <p>2022-03-17</p>
-                      <p>94 ПРОСМОТРЫ</p>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.content_BLOCK_8_block_card}>
-                  <div className={styles.content_BLOCK_8_block_card_img}></div>
-                  <div className={styles.content_BLOCK_8_block_card_info}>
-                    <p>
-                      ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ
-                      ВСЕМИРНОМУ ДНЮ СЛУХА
-                    </p>
-                    <div>
-                      <p>2022-03-17</p>
-                      <p>94 ПРОСМОТРЫ</p>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.content_BLOCK_8_block_card}>
-                  <div className={styles.content_BLOCK_8_block_card_img}></div>
-                  <div className={styles.content_BLOCK_8_block_card_info}>
-                    <p>
-                      ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ
-                      ВСЕМИРНОМУ ДНЮ СЛУХА
-                    </p>
-                    <div>
-                      <p>2022-03-17</p>
-                      <p>94 ПРОСМОТРЫ</p>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.content_BLOCK_8_block_card}>
-                  <div className={styles.content_BLOCK_8_block_card_img}></div>
-                  <div className={styles.content_BLOCK_8_block_card_info}>
-                    <p>
-                      ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ
-                      ВСЕМИРНОМУ ДНЮ СЛУХА
-                    </p>
-                    <div>
-                      <p>2022-03-17</p>
-                      <p>94 ПРОСМОТРЫ</p>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.content_BLOCK_8_block_card}>
-                  <div className={styles.content_BLOCK_8_block_card_img}></div>
-                  <div className={styles.content_BLOCK_8_block_card_info}>
-                    <p>
-                      ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ
-                      ВСЕМИРНОМУ ДНЮ СЛУХА
-                    </p>
-                    <div>
-                      <p>2022-03-17</p>
-                      <p>94 ПРОСМОТРЫ</p>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.content_BLOCK_8_block_card}>
-                  <div className={styles.content_BLOCK_8_block_card_img}></div>
-                  <div className={styles.content_BLOCK_8_block_card_info}>
-                    <p>
-                      ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ
-                      ВСЕМИРНОМУ ДНЮ СЛУХА
-                    </p>
-                    <div>
-                      <p>2022-03-17</p>
-                      <p>94 ПРОСМОТРЫ</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={styles.content_BLOCK_9}>
-            <p>С НАМИ СОТРУДНИЧАЮТ</p>
-            <div className={styles.content_BLOCK_9_cards}>
-              <div className={styles.content_BLOCK_9_card}>
-                <div className={styles.content_BLOCK_9_card_img}></div>
-                <p>Университеты и колледжи</p>
-              </div>
-              <div className={styles.content_BLOCK_9_card}>
-                <div className={styles.content_BLOCK_9_card_img}></div>
-                <p>Университеты и колледжи</p>
-              </div>
-              <div className={styles.content_BLOCK_9_card}>
-                <div className={styles.content_BLOCK_9_card_img}></div>
-                <p>Университеты и колледжи</p>
-              </div>
-              <div className={styles.content_BLOCK_9_card}>
-                <div className={styles.content_BLOCK_9_card_img}></div>
-                <p>Университеты и колледжи</p>
-              </div>
-              <div className={styles.content_BLOCK_9_card}>
-                <div className={styles.content_BLOCK_9_card_img}></div>
-                <p>Университеты и колледжи</p>
-              </div>
-              <div className={styles.content_BLOCK_9_card}>
-                <div className={styles.content_BLOCK_9_card_img}></div>
-                <p>Университеты и колледжи</p>
-              </div>
-              <div className={styles.content_BLOCK_9_card}>
-                <div className={styles.content_BLOCK_9_card_img}></div>
-                <p>Университеты и колледжи</p>
-              </div>
-              <div className={styles.content_BLOCK_9_card}>
-                <div className={styles.content_BLOCK_9_card_img}></div>
-                <p>Университеты и колледжи</p>
-              </div>
-              <div className={styles.content_BLOCK_9_card}>
-                <div className={styles.content_BLOCK_9_card_img}></div>
-                <p>Университеты и колледжи</p>
-              </div>
-              <div className={styles.content_BLOCK_9_card}>
-                <div className={styles.content_BLOCK_9_card_img}></div>
-                <p>Университеты и колледжи</p>
-              </div>
-            </div>
-          </div>   
+          </div> 
         </div>
-        <footer>
-          <div className={styles.footer_block}>
-            <div className={styles.footer_block_logo}>
-              <Image width={300} height={100} src="/logo.png" alt="q" />
+      <div className={styles.content_BLOCK_3}>
+          <div className={styles.content_BLOCK_3_cards}>
+            <span className={styles.content_BLOCK_we}><Image src="/img4.jpg" alt="img"
+              className={styles.content_BLOCK_we}
+              objectFit="cover"
+              layout="fill"
+            />
+            </span>
+            <span className={styles.content_BLOCK_we}><Image src="/img4.jpg" alt="img"
+              className={styles.content_BLOCK_we}
+              objectFit="cover"
+              layout="fill"
+            /></span>
+            <span className={styles.content_BLOCK_we}><Image src="/img4.jpg" alt="img"
+              className={styles.content_BLOCK_we}
+              objectFit="cover"
+              layout="fill"
+            /></span>
+            <span className={styles.content_BLOCK_we}><Image src="/img4.jpg" alt="img"
+              className={styles.content_BLOCK_we}
+              objectFit="cover"
+              layout="fill"
+            /></span>
+          </div>
+
+        </div> 
+           <div className={styles.content_BLOCK_4}>
+          <div className={styles.content_BLOCK_5}>
+            <div className={styles.content_BLOCK_5_block}>
+              <p>МААНИЛЇЇ МАТЕРИАЛДАР</p>
             </div>
-            <div className={styles.footer_block_contend_2}>
-              <div className={styles.Instagram_2}>
-                <a className={styles.a} href="#">
-                  <AiOutlineGooglePlus />
-                </a>
-                <a href="#">
-                  <AiOutlineInstagram />
-                </a>
-                <a href="#">
-                  <CiTwitter />
-                </a>
-                <a href="#">
-                  <CiFacebook />
-                </a>
+            <div className={styles.content_BLOCK_5_block_cards}>
+              <div className={styles.content_BLOCK_5_block_card}>
+                <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
+                <div className={styles.content_BLOCK_5_block_card_date}>
+                  <p>2022-03-17</p>
+                  <p>94 ПРОСМОТРЫ</p>
+                </div>
+              </div>
+              <div className={styles.content_BLOCK_5_block_card}>
+                <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
+                <div className={styles.content_BLOCK_5_block_card_date}>
+                  <p>2022-03-17</p>
+                  <p>94 ПРОСМОТРЫ</p>
+                </div>
+              </div>
+              <div className={styles.content_BLOCK_5_block_card}>
+                <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
+                <div className={styles.content_BLOCK_5_block_card_date}>
+                  <p>2022-03-17</p>
+                  <p>94 ПРОСМОТРЫ</p>
+                </div>
+              </div>
+              <div className={styles.content_BLOCK_5_block_card}>
+                <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
+                <div className={styles.content_BLOCK_5_block_card_date}>
+                  <p>2022-03-17</p>
+                  <p>94 ПРОСМОТРЫ</p>
+                </div>
+                <div className={styles.content_BLOCK_5_block_card_w}>
+                  <p>ЕЩЕ БОЛЬШЕ НОВОСТЕЙ</p>
+                  <SlArrowRight className={styles.SlArrowRight} />
+                </div>
               </div>
             </div>
-            <div className={styles.footer_block_3}>
-              <p>
-                720026, Г. БИШКЕК, УЛ. РАЗЗАКОВА,
-                <br /> 51А <br />
-                ПРИЁМНАЯ РЕКТОРА: +(0312) 66-03-47{" "}
-              </p>
+          </div>
+          <div className={styles.content_BLOCK_5}>
+            <div className={styles.content_BLOCK_5_block}>
+              <p>МААНИЛЇЇ МАТЕРИАЛДАР</p>
+            </div>
+            <div className={styles.content_BLOCK_5_block_cards}>
+              <div className={styles.content_BLOCK_5_block_card}>
+                <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
+                <div className={styles.content_BLOCK_5_block_card_date}>
+                  <p>2022-03-17</p>
+                  <p>94 ПРОСМОТРЫ</p>
+                </div>
+              </div>
+              <div className={styles.content_BLOCK_5_block_card}>
+                <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
+                <div className={styles.content_BLOCK_5_block_card_date}>
+                  <p>2022-03-17</p>
+                  <p>94 ПРОСМОТРЫ</p>
+                </div>
+              </div>
+              <div className={styles.content_BLOCK_5_block_card}>
+                <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
+                <div className={styles.content_BLOCK_5_block_card_date}>
+                  <p>2022-03-17</p>
+                  <p>94 ПРОСМОТРЫ</p>
+                </div>
+              </div>
+              <div className={styles.content_BLOCK_5_block_card}>
+                <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
+                <div className={styles.content_BLOCK_5_block_card_date}>
+                  <p>2022-03-17</p>
+                  <p>94 ПРОСМОТРЫ</p>
+                </div>
+                <div className={styles.content_BLOCK_5_block_card_w}>
+                  <p>ЕЩЕ БОЛЬШЕ НОВОСТЕЙ</p>
+                  <SlArrowRight className={styles.SlArrowRight} />
+                </div>
+              </div>
             </div>
           </div>
-          <div className={styles.footer_block2}>
-            <h4 className={styles.footer_block2_h2}>
-              2015-2022 КГУ им. И.Арабаева ОИТ и ТОК . Все права защищены.
-            </h4>
+          <div className={styles.content_BLOCK_5}>
+            <div className={styles.content_BLOCK_5_block}>
+              <p>МААНИЛЇЇ МАТЕРИАЛДАР</p>
+            </div>
+            <div className={styles.content_BLOCK_5_block_cards}>
+              <div className={styles.content_BLOCK_5_block_card}>
+                <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
+                <div className={styles.content_BLOCK_5_block_card_date}>
+                  <p>2022-03-17</p>
+                  <p>94 ПРОСМОТРЫ</p>
+                </div>
+              </div>
+              <div className={styles.content_BLOCK_5_block_card}>
+                <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
+                <div className={styles.content_BLOCK_5_block_card_date}>
+                  <p>2022-03-17</p>
+                  <p>94 ПРОСМОТРЫ</p>
+                </div>
+              </div>
+              <div className={styles.content_BLOCK_5_block_card}>
+                <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
+                <div className={styles.content_BLOCK_5_block_card_date}>
+                  <p>2022-03-17</p>
+                  <p>94 ПРОСМОТРЫ</p>
+                </div>
+              </div>
+              <div className={styles.content_BLOCK_5_block_card}>
+                <h3>ХИМИЯ ЖАНА АНЫ ОКУТУУНУН ТЕХНОЛОГИЯСЫ КАФЕДРАСЫНДА</h3>
+                <div className={styles.content_BLOCK_5_block_card_date}>
+                  <p>2022-03-17</p>
+                  <p>94 ПРОСМОТРЫ</p>
+                </div>
+                <div className={styles.content_BLOCK_5_block_card_w}>
+                  <p>ЕЩЕ БОЛЬШЕ НОВОСТЕЙ</p>
+                  <SlArrowRight className={styles.SlArrowRight} />
+                </div>
+              </div>
+            </div>
           </div>
-        </footer>  
-      
+        </div> 
+       <div className={styles.content_BLOCK_6}>
+          <h3 className={styles.h3}>НАШИ ИНСТИТУТЫ И ФАКУЛЬТЕТЫ</h3>
+          <div className={styles.content_BLOCK_6_catds}>
+            <div className={styles.content_BLOCK_6_catd}>
+              <div className={styles.content_BLOCK_6_catd_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_6_catd_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>
+                Наши
+                <br />
+                институты и
+              </p>
+              <div></div>
+            </div>
+            <div className={styles.content_BLOCK_6_catd}>
+              <div className={styles.content_BLOCK_6_catd_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_6_catd_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>
+                Наши
+                <br />
+                институты и
+              </p>
+              <div></div>
+            </div>{" "}
+            <div className={styles.content_BLOCK_6_catd}>
+              <div className={styles.content_BLOCK_6_catd_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_6_catd_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>
+                Наши
+                <br />
+                институты и
+              </p>
+              <div></div>
+            </div>{" "}
+            <div className={styles.content_BLOCK_6_catd}>
+              <div className={styles.content_BLOCK_6_catd_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_6_catd_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>
+                Наши
+                <br />
+                институты и
+              </p>
+              <div></div>
+            </div>{" "}
+            <div className={styles.content_BLOCK_6_catd}>
+              <div className={styles.content_BLOCK_6_catd_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_6_catd_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>
+                Наши
+                <br />
+                институты и
+              </p>
+              <div></div>
+            </div>{" "}
+            <div className={styles.content_BLOCK_6_catd}>
+              <div className={styles.content_BLOCK_6_catd_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_6_catd_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>
+                Наши
+                <br />
+                институты и
+              </p>
+              <div></div>
+            </div>{" "}
+            <div className={styles.content_BLOCK_6_catd}>
+              <div className={styles.content_BLOCK_6_catd_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_6_catd_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>
+                Наши
+                <br />
+                институты и
+              </p>
+              <div></div>
+            </div>{" "}
+            <div className={styles.content_BLOCK_6_catd}>
+              <div className={styles.content_BLOCK_6_catd_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_6_catd_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>
+                Наши
+                <br />
+                институты и
+              </p>
+              <div></div>
+            </div>{" "}
+            <div className={styles.content_BLOCK_6_catd}>
+              <div className={styles.content_BLOCK_6_catd_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_6_catd_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>
+                Наши
+                <br />
+                институты и
+              </p>
+              <div></div>
+            </div>{" "}
+            <div className={styles.content_BLOCK_6_catd}>
+              <div className={styles.content_BLOCK_6_catd_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_6_catd_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>
+                Наши
+                <br />
+                институты и
+              </p>
+              <div></div>
+            </div>{" "}
+            <div className={styles.content_BLOCK_6_catd}>
+              <div className={styles.content_BLOCK_6_catd_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_6_catd_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>
+                Наши
+                <br />
+                институты и
+              </p>
+              <div></div>
+            </div>{" "}
+            <div className={styles.content_BLOCK_6_catd}>
+              <div className={styles.content_BLOCK_6_catd_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_6_catd_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>
+                Наши
+                <br />
+                институты и
+              </p>
+              <div></div>
+            </div>
+          </div>
+        </div> 
+        <div className={styles.content_BLOCK_7}>
+          <div className={styles.content_BLOCK_7_block}>
+            <div className={styles.content_BLOCK_7_block_p}>
+              <p>ТЕЛЕСТУДИЯ SAN</p>
+            </div>
+            <div className={styles.content_BLOCK_7_block_cards}>
+              <div>
+                <Image src="/img4.jpg" alt="img"
+                  objectFit="cover"
+                  className={styles.content_BLOCK_block_div2_img}
+                  layout="fill"
+                />
+                <div>
+                  <BsPlay className={styles.AiOutlinePauseCircle} />
+                </div>
+              </div>
+              <div>
+                <Image src="/img4.jpg" alt="img"
+                  objectFit="cover"
+                  className={styles.content_BLOCK_block_div2_img}
+                  layout="fill"
+                />
+
+                <div>
+                  <BsPlay className={styles.AiOutlinePauseCircle} />
+                </div>
+              </div>
+              <div>
+                <Image src="/img4.jpg" alt="img"
+                  objectFit="cover"
+                  className={styles.content_BLOCK_block_div2_img}
+                  layout="fill"
+                />
+
+                <div>
+                  <BsPlay className={styles.AiOutlinePauseCircle} />
+                </div>
+              </div>
+              <div>
+                <Image src="/img4.jpg" alt="img"
+                  objectFit="cover"
+                  className={styles.content_BLOCK_block_div2_img}
+                  layout="fill"
+                />
+                <div>
+                  <BsPlay className={styles.AiOutlinePauseCircle} />
+                </div>
+              </div>
+              <div>
+                <Image src="/img4.jpg" alt="img"
+                  objectFit="cover"
+                  className={styles.content_BLOCK_block_div2_img}
+                  layout="fill"
+                />
+
+                <div>
+                  <BsPlay className={styles.AiOutlinePauseCircle} />
+                </div>
+              </div>
+              <div>
+                <Image src="/img4.jpg" alt="img"
+                  objectFit="cover"
+                  className={styles.content_BLOCK_block_div2_img}
+                  layout="fill"
+                />
+
+                <div>
+                  <BsPlay className={styles.AiOutlinePauseCircle} />
+                </div>
+              </div>
+              <div>
+                <Image src="/img4.jpg" alt="img"
+                  objectFit="cover"
+                  className={styles.content_BLOCK_block_div2_img}
+                  layout="fill"
+                />
+
+                <div>
+                  <BsPlay className={styles.AiOutlinePauseCircle} />
+                </div>
+              </div>
+              <div>
+                <Image src="/img4.jpg" alt="img"
+                  objectFit="cover"
+                  className={styles.content_BLOCK_block_div2_img}
+                  layout="fill"
+                />
+
+                 <div>
+                  <BsPlay className={styles.AiOutlinePauseCircle} />
+                </div> 
+              </div>
+            </div>
+            <div className={styles.content_BLOCK_7_cards_info}>
+              <p>ЕЩЕ БОЛЬШЕ НОВОСТЕЙ</p>
+              <SlArrowRight className={styles.SlArrowRight_2} />
+            </div>
+          </div>
+          <div className={styles.content_BLOCK_8}>
+            <div className={styles.content_BLOCK_8_block_p}>
+              <p>ТЕЛЕСТУДИЯ SAN</p>
+            </div>
+          <div className={styles.content_BLOCK_8_block_cards}>
+              <div className={styles.content_BLOCK_8_block_card}>
+                <div className={styles.content_BLOCK_8_block_card_img}> <Image src="/img4.jpg" alt="img"
+                  objectFit="cover"
+                  className={styles.content_BLOCK_block_div2_img}
+                  layout="fill"
+                />
+                </div>
+                <div className={styles.content_BLOCK_8_block_card_info}>
+                  <p>
+                    ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ
+                    ВСЕМИРНОМУ ДНЮ СЛУХА
+                  </p>
+                  <div>
+                    <p>2022-03-17</p>
+                    <p>94 ПРОСМОТРЫ</p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.content_BLOCK_8_block_card}>
+                <div className={styles.content_BLOCK_8_block_card_img}><Image src="/img4.jpg" alt="img"
+                  objectFit="cover"
+                  className={styles.content_BLOCK_block_div2_img}
+                  layout="fill"
+                /></div>
+                <div className={styles.content_BLOCK_8_block_card_info}>
+                  <p>
+                    ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ
+                    ВСЕМИРНОМУ ДНЮ СЛУХА
+                  </p>
+                  <div>
+                    <p>2022-03-17</p>
+                    <p>94 ПРОСМОТРЫ</p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.content_BLOCK_8_block_card}>
+                <div className={styles.content_BLOCK_8_block_card_img}><Image src="/img4.jpg" alt="img"
+                  objectFit="cover"
+                  className={styles.content_BLOCK_block_div2_img}
+                  layout="fill"
+                /></div>
+                <div className={styles.content_BLOCK_8_block_card_info}>
+                  <p>
+                    ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ
+                    ВСЕМИРНОМУ ДНЮ СЛУХА
+                  </p>
+                  <div>
+                    <p>2022-03-17</p>
+                    <p>94 ПРОСМОТРЫ</p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.content_BLOCK_8_block_card}>
+                <div className={styles.content_BLOCK_8_block_card_img}><Image src="/img4.jpg" alt="img"
+                  objectFit="cover"
+                  className={styles.content_BLOCK_block_div2_img}
+                  layout="fill"
+                /></div>
+                <div className={styles.content_BLOCK_8_block_card_info}>
+                  <p>
+                    ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ
+                    ВСЕМИРНОМУ ДНЮ СЛУХА
+                  </p>
+                  <div>
+                    <p>2022-03-17</p>
+                    <p>94 ПРОСМОТРЫ</p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.content_BLOCK_8_block_card}>
+                <div className={styles.content_BLOCK_8_block_card_img}><Image src="/img4.jpg" alt="img"
+                  objectFit="cover"
+                  className={styles.content_BLOCK_block_div2_img}
+                  layout="fill"
+                /></div>
+                <div className={styles.content_BLOCK_8_block_card_info}>
+                  <p>
+                    ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ
+                    ВСЕМИРНОМУ ДНЮ СЛУХА
+                  </p>
+                  <div>
+                    <p>2022-03-17</p>
+                    <p>94 ПРОСМОТРЫ</p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.content_BLOCK_8_block_card}>
+                <div className={styles.content_BLOCK_8_block_card_img}><Image src="/img4.jpg" alt="img"
+                  objectFit="cover"
+                  className={styles.content_BLOCK_block_div2_img}
+                  layout="fill"
+                /></div>
+                <div className={styles.content_BLOCK_8_block_card_info}>
+                  <p>
+                    ФАКУЛЬТЕТ ПЕДАГОГИКИ ПРОВЕЛ МЕРОПРИЯТИЕ, ПОСВЯЩЕННОЕ
+                    ВСЕМИРНОМУ ДНЮ СЛУХА
+                  </p>
+                  <div>
+                    <p>2022-03-17</p>
+                    <p>94 ПРОСМОТРЫ</p>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>  
+        <div className={styles.content_BLOCK_9}>
+          <p>С НАМИ СОТРУДНИЧАЮТ</p>
+          <div className={styles.content_BLOCK_9_cards}>
+            <div className={styles.content_BLOCK_9_card}>
+              <div className={styles.content_BLOCK_9_card_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_9_card_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>Университеты и колледжи</p>
+            </div>
+            <div className={styles.content_BLOCK_9_card}>
+              <div className={styles.content_BLOCK_9_card_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_9_card_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>Университеты и колледжи</p>
+            </div>
+            <div className={styles.content_BLOCK_9_card}>
+              <div className={styles.content_BLOCK_9_card_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_9_card_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>Университеты и колледжи</p>
+            </div>
+            <div className={styles.content_BLOCK_9_card}>
+              <div className={styles.content_BLOCK_9_card_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_9_card_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>Университеты и колледжи</p>
+            </div>
+            <div className={styles.content_BLOCK_9_card}>
+              <div className={styles.content_BLOCK_9_card_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_9_card_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>Университеты и колледжи</p>
+            </div>
+            <div className={styles.content_BLOCK_9_card}>
+              <div className={styles.content_BLOCK_9_card_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_9_card_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>Университеты и колледжи</p>
+            </div>
+            <div className={styles.content_BLOCK_9_card}>
+              <div className={styles.content_BLOCK_9_card_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_9_card_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>Университеты и колледжи</p>
+            </div>
+            <div className={styles.content_BLOCK_9_card}>
+              <div className={styles.content_BLOCK_9_card_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_9_card_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>Университеты и колледжи</p>
+            </div>
+            <div className={styles.content_BLOCK_9_card}>
+              <div className={styles.content_BLOCK_9_card_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_9_card_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>Университеты и колледжи</p>
+            </div>
+            <div className={styles.content_BLOCK_9_card}>
+              <div className={styles.content_BLOCK_9_card_img}><Image src="/img4.jpg" alt="img"
+                className={styles.content_BLOCK_9_card_img}
+                objectFit="cover"
+                layout="fill"
+              /></div>
+              <p>Университеты и колледжи</p>
+            </div>
+          </div>
+        </div>
+      </div> 
+     
+
     </div>
   );
 }
