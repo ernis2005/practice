@@ -5,11 +5,11 @@ import Menu from '../pages/muenu/Menu';
 import styles from "../styles/Home.module.scss";
 
 import Link from "next/link"
-import { AiOutlineGooglePlus, AiOutlineInstagram } from 'react-icons/ai';
-import { CiFacebook, CiTwitter } from 'react-icons/ci';
-import { BsTelephone } from 'react-icons/bs';
-import { TbMail } from 'react-icons/tb';
-import { FiMapPin } from 'react-icons/fi';
+// import { AiOutlineGooglePlus, AiOutlineInstagram } from 'react-icons/ai';
+// import { CiFacebook, CiTwitter } from 'react-icons/ci';
+// import { BsTelephone } from 'react-icons/bs';
+// import { TbMail } from 'react-icons/tb';
+// import { FiMapPin } from 'react-icons/fi';
 function Navigation({children }) {
   return (
     <div>
@@ -24,7 +24,7 @@ function Navigation({children }) {
       <div className={styles.menu}>
         <div className={styles.Instagram}>
 
-          <AiOutlineGooglePlus/>
+          {/* <AiOutlineGooglePlus/>
 
           <AiOutlineInstagram href="#" />
 
@@ -32,7 +32,7 @@ function Navigation({children }) {
           <CiTwitter />
 
 
-          <CiFacebook />
+          <CiFacebook /> */}
 
         </div>
         <div className={styles.info_menu}>
@@ -54,21 +54,21 @@ function Navigation({children }) {
         </div>
         <div className={styles.menu1_block}>
           <div className={styles.block_menu1}>
-            <BsTelephone className={styles.TbMail} />
+            {/* <BsTelephone className={styles.TbMail} /> */}
             <div className={styles.block_menu_info}>
               <p>приемная ректора</p>
               <a href="tel:+312 66 03 47">+312 66 03 47</a>
             </div>
           </div>
           <div className={styles.block_menu1}>
-            <TbMail className={styles.TbMail} />
+            {/* <TbMail className={styles.TbMail} /> */}
             <div className={styles.block_menu_info}>
               <p>email</p>
               <a href="mailto:i.arabaev@mail.ru">i.arabaev@mail.ru</a>
             </div>
           </div>
           <div className={styles.block_menu1}>
-            <FiMapPin className={styles.TbMail} />
+            {/* <FiMapPin className={styles.TbMail} /> */}
             <div className={styles.block_menu_info}>
               <p>адрес</p>
               <a href="#">720026, г.Бишкек, ул. Раззакова 51а</a>
@@ -162,7 +162,7 @@ function Navigation({children }) {
           </div>
           <div className={styles.footer_block_contend_2}>
             <div className={styles.Instagram_2}>
-              <a className={styles.a} href="#">
+              {/* <a className={styles.a} href="#">
                 <AiOutlineGooglePlus />
               </a>
               <a href="#">
@@ -173,7 +173,7 @@ function Navigation({children }) {
               </a>
               <a href="#">
                 <CiFacebook />
-              </a>
+              </a> */}
             </div>
           </div>
           <div className={styles.footer_block_3}>
