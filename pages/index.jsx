@@ -14,7 +14,7 @@ import React, { useState, useEffect } from "react";
 
 
 import sections from './Scrollspy/sections'
-import { CiCalendarDate } from "react-icons/ci";
+// import { CiCalendarDate } from "react-icons/ci";
 
 import "swiper/css";
 import "swiper/css/pagination";
