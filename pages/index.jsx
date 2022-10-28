@@ -3,14 +3,14 @@ import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { AiOutlineEye, AiOutlineGooglePlus } from "react-icons/ai";
-import { AiOutlineInstagram } from "react-icons/ai";
-import { CiPlay1, CiTwitter } from "react-icons/ci";
-import { CiFacebook } from "react-icons/ci";
-import { TbMail } from "react-icons/tb";
-import { BsPlay, BsTelephone } from "react-icons/bs";
-import { FiMapPin } from "react-icons/fi";
-import { SlArrowRight } from "react-icons/sl";
+// import { AiOutlineEye, AiOutlineGooglePlus } from "react-icons/ai";
+// import { AiOutlineInstagram } from "react-icons/ai";
+// import { CiPlay1, CiTwitter } from "react-icons/ci";
+// import { CiFacebook } from "react-icons/ci";
+// import { TbMail } from "react-icons/tb";
+// import { BsPlay, BsTelephone } from "react-icons/bs";
+// import { FiMapPin } from "react-icons/fi";
+// import { SlArrowRight } from "react-icons/sl";
 
 
 import sections from './Scrollspy/sections'
@@ -55,14 +55,14 @@ export default function Home({ data }) {
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, expedita temporibus. Modi? Lorem ipsum, dolor 
 </p>
 <div>
-  <p>
+  {/* <p>
     <CiCalendarDate />
     2002 15 04
   </p>
   <p>
     <AiOutlineEye />
     999
-  </p>
+  </p> */}
 </div>
 
 </div>
@@ -76,7 +76,7 @@ export default function Home({ data }) {
             >
               {sections.map((section, i) => (
                 <div className={styles.sections} key={section.id}>
-                  <div>    <p><CiCalendarDate /> {section.the_date}</p> <p><AiOutlineEye />{section.AiOutlineEye}</p></div>
+                  {/* <div>    <p><CiCalendarDate /> {section.the_date}</p> <p><AiOutlineEye />{section.AiOutlineEye}</p></div> */}
 
                   <a className={styles.sections_a} href={'#'}>
                     {section.info}</a>
@@ -298,7 +298,7 @@ export default function Home({ data }) {
                 </div>
                 <div className={styles.content_BLOCK_5_block_card_w}>
                   <p>ЕЩЕ БОЛЬШЕ НОВОСТЕЙ</p>
-                  <SlArrowRight className={styles.SlArrowRight} />
+                  {/* <SlArrowRight className={styles.SlArrowRight} /> */}
                 </div>
               </div>
             </div>
@@ -337,7 +337,7 @@ export default function Home({ data }) {
                 </div>
                 <div className={styles.content_BLOCK_5_block_card_w}>
                   <p>ЕЩЕ БОЛЬШЕ НОВОСТЕЙ</p>
-                  <SlArrowRight className={styles.SlArrowRight} />
+                  {/* <SlArrowRight className={styles.SlArrowRight} /> */}
                 </div>
               </div>
             </div>
@@ -376,7 +376,7 @@ export default function Home({ data }) {
                 </div>
                 <div className={styles.content_BLOCK_5_block_card_w}>
                   <p>ЕЩЕ БОЛЬШЕ НОВОСТЕЙ</p>
-                  <SlArrowRight className={styles.SlArrowRight} />
+                  {/* <SlArrowRight className={styles.SlArrowRight} /> */}
                 </div>
               </div>
             </div>
@@ -556,7 +556,7 @@ export default function Home({ data }) {
                   layout="fill"
                 />
                 <div>
-                  <BsPlay className={styles.AiOutlinePauseCircle} />
+                  {/* <BsPlay className={styles.AiOutlinePauseCircle} /> */}
                 </div>
               </div>
               <div>
@@ -567,7 +567,7 @@ export default function Home({ data }) {
                 />
 
                 <div>
-                  <BsPlay className={styles.AiOutlinePauseCircle} />
+                  {/* <BsPlay className={styles.AiOutlinePauseCircle} /> */}
                 </div>
               </div>
               <div>
@@ -578,7 +578,7 @@ export default function Home({ data }) {
                 />
 
                 <div>
-                  <BsPlay className={styles.AiOutlinePauseCircle} />
+                  {/* <BsPlay className={styles.AiOutlinePauseCircle} /> */}
                 </div>
               </div>
               <div>
@@ -588,18 +588,7 @@ export default function Home({ data }) {
                   layout="fill"
                 />
                 <div>
-                  <BsPlay className={styles.AiOutlinePauseCircle} />
-                </div>
-              </div>
-              <div>
-                <Image src="/img4.jpg" alt="img"
-                  objectFit="cover"
-                  className={styles.content_BLOCK_block_div2_img}
-                  layout="fill"
-                />
-
-                <div>
-                  <BsPlay className={styles.AiOutlinePauseCircle} />
+                  {/* <BsPlay className={styles.AiOutlinePauseCircle} /> */}
                 </div>
               </div>
               <div>
@@ -610,7 +599,7 @@ export default function Home({ data }) {
                 />
 
                 <div>
-                  <BsPlay className={styles.AiOutlinePauseCircle} />
+                  {/* <BsPlay className={styles.AiOutlinePauseCircle} /> */}
                 </div>
               </div>
               <div>
@@ -621,7 +610,18 @@ export default function Home({ data }) {
                 />
 
                 <div>
-                  <BsPlay className={styles.AiOutlinePauseCircle} />
+                  {/* <BsPlay className={styles.AiOutlinePauseCircle} /> */}
+                </div>
+              </div>
+              <div>
+                <Image src="/img4.jpg" alt="img"
+                  objectFit="cover"
+                  className={styles.content_BLOCK_block_div2_img}
+                  layout="fill"
+                />
+
+                <div>
+                  {/* <BsPlay className={styles.AiOutlinePauseCircle} /> */}
                 </div>
               </div>
               <div>
@@ -632,13 +632,13 @@ export default function Home({ data }) {
                 />
 
                  <div>
-                  <BsPlay className={styles.AiOutlinePauseCircle} />
+                  {/* <BsPlay className={styles.AiOutlinePauseCircle} /> */}
                 </div> 
               </div>
             </div>
             <div className={styles.content_BLOCK_7_cards_info}>
               <p>ЕЩЕ БОЛЬШЕ НОВОСТЕЙ</p>
-              <SlArrowRight className={styles.SlArrowRight_2} />
+              {/* <SlArrowRight className={styles.SlArrowRight_2} /> */}
             </div>
           </div>
           <div className={styles.content_BLOCK_8}>
