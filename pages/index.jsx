@@ -258,7 +258,7 @@ export default function Home({ data }) {
          
           </div>
          
-          <div>
+          <div className={styles.header_content_block2_2q}>
             <div className={styles.header_content_block2}
 
             >
@@ -387,12 +387,7 @@ export default function Home({ data }) {
               <div>
                 <h1>АKNpress</h1>
               </div>
-              <div className={styles.content_BLOCK_block2}>
-                <p className={styles.content_BLOCK_block2_p1}>
-                  ПОРТАЛ ДИСТАНЦИОННОГО ОБУЧЕНИЯ
-                </p>
-                <h2 className={styles.content_BLOCK_block2_h2}>AVN SOFT</h2>
-              </div>
+              
             </div>
 
             <div className={styles.content_BLOCK_block3}>
@@ -934,7 +929,11 @@ export default function Home({ data }) {
               <p>ТЕЛЕСТУДИЯ SAN</p>
             </div>
           <div className={styles.content_BLOCK_8_block_cards}>
-              <div className={styles.content_BLOCK_8_block_card}>
+              <motion.div initial="initial"
+                  whileInView="animate"
+                  exit="initial"
+
+                  variants={left} className={styles.content_BLOCK_8_block_card}>
                 <div className={styles.content_BLOCK_8_block_card_img}> <Image src="/img4.jpg" alt="img"
                   objectFit="cover"
                   className={styles.content_BLOCK_block_div2_img}
@@ -951,8 +950,12 @@ export default function Home({ data }) {
                     <p>94 ПРОСМОТРЫ</p>
                   </div>
                 </div>
-              </div>
-              <div className={styles.content_BLOCK_8_block_card}>
+              </motion.div>
+              <motion.div initial="initial"
+                  whileInView="animate"
+                  exit="initial"
+
+                  variants={left} className={styles.content_BLOCK_8_block_card}>
                 <div className={styles.content_BLOCK_8_block_card_img}><Image src="/img4.jpg" alt="img"
                   objectFit="cover"
                   className={styles.content_BLOCK_block_div2_img}
@@ -968,8 +971,12 @@ export default function Home({ data }) {
                     <p>94 ПРОСМОТРЫ</p>
                   </div>
                 </div>
-              </div>
-              <div className={styles.content_BLOCK_8_block_card}>
+              </motion.div>
+              <motion.div initial="initial"
+                  whileInView="animate"
+                  exit="initial"
+
+                  variants={left} className={styles.content_BLOCK_8_block_card}>
                 <div className={styles.content_BLOCK_8_block_card_img}><Image src="/img4.jpg" alt="img"
                   objectFit="cover"
                   className={styles.content_BLOCK_block_div2_img}
@@ -985,8 +992,12 @@ export default function Home({ data }) {
                     <p>94 ПРОСМОТРЫ</p>
                   </div>
                 </div>
-              </div>
-              <div className={styles.content_BLOCK_8_block_card}>
+              </motion.div>
+              <motion.div initial="initial"
+                  whileInView="animate"
+                  exit="initial"
+
+                  variants={left} className={styles.content_BLOCK_8_block_card}>
                 <div className={styles.content_BLOCK_8_block_card_img}><Image src="/img4.jpg" alt="img"
                   objectFit="cover"
                   className={styles.content_BLOCK_block_div2_img}
@@ -1002,8 +1013,12 @@ export default function Home({ data }) {
                     <p>94 ПРОСМОТРЫ</p>
                   </div>
                 </div>
-              </div>
-              <div className={styles.content_BLOCK_8_block_card}>
+              </motion.div>
+              <motion.div initial="initial"
+                  whileInView="animate"
+                  exit="initial"
+
+                  variants={left} className={styles.content_BLOCK_8_block_card}>
                 <div className={styles.content_BLOCK_8_block_card_img}><Image src="/img4.jpg" alt="img"
                   objectFit="cover"
                   className={styles.content_BLOCK_block_div2_img}
@@ -1019,8 +1034,12 @@ export default function Home({ data }) {
                     <p>94 ПРОСМОТРЫ</p>
                   </div>
                 </div>
-              </div>
-              <div className={styles.content_BLOCK_8_block_card}>
+              </motion.div>
+              <motion.div initial="initial"
+                  whileInView="animate"
+                  exit="initial"
+
+                  variants={left} className={styles.content_BLOCK_8_block_card}>
                 <div className={styles.content_BLOCK_8_block_card_img}><Image src="/img4.jpg" alt="img"
                   objectFit="cover"
                   className={styles.content_BLOCK_block_div2_img}
@@ -1036,7 +1055,7 @@ export default function Home({ data }) {
                     <p>94 ПРОСМОТРЫ</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div> 
           </div>
         </div>  
