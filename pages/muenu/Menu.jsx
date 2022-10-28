@@ -3,13 +3,13 @@ import Image from "next/image";
 import React, { useState } from "react";
 import s from "./Menu.module.scss";
 import MenuIcon from "@mui/icons-material/Menu";
-import { AiOutlineGooglePlus } from "react-icons/ai";
-import { AiOutlineInstagram } from "react-icons/ai";
-import { CiTwitter } from "react-icons/ci";
-import { CiFacebook } from "react-icons/ci";
-import { TbMail } from "react-icons/tb";
-import { BsTelephone } from "react-icons/bs";
-import { FiMapPin } from "react-icons/fi";
+// import { AiOutlineGooglePlus } from "react-icons/ai";
+// import { AiOutlineInstagram } from "react-icons/ai";
+// import { CiTwitter } from "react-icons/ci";
+// import { CiFacebook } from "react-icons/ci";
+// import { TbMail } from "react-icons/tb";
+// import { BsTelephone } from "react-icons/bs";
+// import { FiMapPin } from "react-icons/fi";
 import Link from "next/link"
 function Menu() {
   const [first, setfirst] = useState(true);
@@ -23,7 +23,7 @@ function Menu() {
           <button className={s.bt}>ENG</button>
         </div>
      
-            <MenuIcon onClick={() => setfirst(!first)} className={s.IconButton} />
+           <MenuIcon onClick={() => setfirst(!first)} className={s.IconButton} /> 
         
         
       </div>
@@ -88,21 +88,21 @@ function Menu() {
             
             <div className={s.menu1_block}>
               <div className={s.block_menu1}>
-                <BsTelephone className={s.TbMail} />
+                {/* <BsTelephone className={s.TbMail} /> */}
                 <div className={s.block_menu_info}>
                   
                   <a href="tel:+312 66 03 47">+312 66 03 47</a>
                 </div>
               </div>
               <div className={s.block_menu1}>
-                <TbMail className={s.TbMail} />
+                {/* <TbMail className={s.TbMail} /> */}
                 <div className={s.block_menu_info}>
                  
                   <a href="mailto:i.arabaev@mail.ru">i.arabaev@mail.ru</a>
                 </div>
               </div>
               <div className={s.block_menu1}>
-                <FiMapPin className={s.TbMail} />
+                {/* <FiMapPin className={s.TbMail} /> */}
                 <div className={s.block_menu_info}>
                
                   <a href="#">720026, г.Бишкек, ул. Раззакова 51а</a>
@@ -110,7 +110,7 @@ function Menu() {
               </div>
             </div>
            
-            <div className={s.Instagram}>
+            {/* <div className={s.Instagram}>
               <a className={s.a} href="#">
                 <AiOutlineGooglePlus />
               </a>
@@ -123,7 +123,7 @@ function Menu() {
               <a href="#">
                 <CiFacebook />
               </a>
-            </div>
+            </div> */}
         </div>
       </div>
     </div>
