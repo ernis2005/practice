@@ -236,7 +236,7 @@ export default function Home({ data }) {
               className={styles.header_content_block22_img}
               layout="fill"
             />
-            <div>
+            <div className={styles.header_content_block22_infos}>
             <div className={styles.header_content_block22_info}>
 
 <p>
@@ -281,9 +281,7 @@ export default function Home({ data }) {
       </header>
        <div className={styles.info_block}>
         <div className={styles.info_blockk}>
-        <div>
-
-</div>
+      
 <div className={styles.info_block_h1}>
   <span></span>
   <h1>
