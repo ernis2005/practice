@@ -3,14 +3,13 @@ import React from 'react'
 import Image from "next/image";
 import Menu from '../pages/muenu/Menu';
 import styles from "../styles/Home.module.scss";
-import { AiOutlineGooglePlus } from "react-icons/ai";
-import { AiOutlineInstagram } from "react-icons/ai";
-import { CiCalendarDate, CiTwitter } from "react-icons/ci";
-import { CiFacebook } from "react-icons/ci";
-import { TbMail } from "react-icons/tb";
-import { BsTelephone } from "react-icons/bs";
-import { FiMapPin } from "react-icons/fi";
+
 import Link from "next/link"
+import { AiOutlineGooglePlus, AiOutlineInstagram } from 'react-icons/ai';
+import { CiFacebook, CiTwitter } from 'react-icons/ci';
+import { BsTelephone } from 'react-icons/bs';
+import { TbMail } from 'react-icons/tb';
+import { FiMapPin } from 'react-icons/fi';
 function Navigation({children }) {
   return (
     <div>
@@ -25,7 +24,7 @@ function Navigation({children }) {
       <div className={styles.menu}>
         <div className={styles.Instagram}>
 
-          <AiOutlineGooglePlus />
+          <AiOutlineGooglePlus/>
 
           <AiOutlineInstagram href="#" />
 
