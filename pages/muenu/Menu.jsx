@@ -31,7 +31,7 @@ function Menu() {
         <div className={s.menus}>
           
             <div className={s.menu3}>
-              <h1>Навигация</h1>
+           
               <Link href="/">ГЛАВНАЯ</Link>
               <details>
                 <summary>О НАС</summary>

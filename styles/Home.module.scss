@@ -11,7 +11,7 @@
 
 .header_content_block22{
 width:750px;
- height: 550px;
+ height: 450px;
 padding-bottom:50px ;
 
   border-radius:5px ;
@@ -30,7 +30,7 @@ position: relative;
 max-width: 100%;
 
 color: white;
-margin-top: 400px;
+margin-top: 250px;
   z-index: 1;
   border-radius: 6px;
   background-color: #b4420085;
@@ -113,7 +113,9 @@ margin-top: 400px;
   display: block;
   gap: 20px;
 }
-
+.content_BLOCK3{
+  margin-left: 10px;
+}
 .header {
   width: 100%;
   height: 700px;
@@ -246,7 +248,7 @@ justify-content: center;
     display: flex;
   max-width: 1500px;
     justify-content: space-between;
-    margin: 0 auto;
+    margin-top: -240px;
   }
   .info_block_h1 {
     display: flex;
@@ -355,11 +357,12 @@ bottom: 3px solid #d4d4d4;
     justify-content: center;
     background-color: #f7ece6;
     .content_BLOCK_block {
-    
+
+   width: 100%;
       display: block;
       padding: 30px;
       div {
-        width: 90%;
+        width: 100%;
         height: 35px;
         background-color: #b44100;
         h3 {
@@ -370,8 +373,8 @@ bottom: 3px solid #d4d4d4;
         }
       }
       .content_BLOCK_block_div2 {
-        width: 99%;
-      
+        width: 100%;
+      border-radius: 10px;
         margin-top: 30px;
         height: 400px;
         position: relative;
@@ -390,6 +393,7 @@ bottom: 3px solid #d4d4d4;
   height: 200px;
   background-color: #2a1d1e;
   position: relative;
+  border-radius: 10px;
 }
 .map_card_block2 {
   max-width: 200px;
@@ -404,13 +408,27 @@ bottom: 3px solid #d4d4d4;
   h3 {
     font-size: 16px;
     padding: 1px;
+ color: rgba(0, 0, 0, 0.753);
+    font-style: italic;
     text-transform: full-width;
     font-style: oblique;
   }
   p {
     font-size: 10px;
     justify-content: flex-end;
+    margin-top: 60px;
+   
   }
+  div{
+    display: flex;
+    justify-content: space-between;
+  }
+  .CiCalendarDate{
+    
+  }
+}
+.content_BLOCK_block_div2_img{
+  border-radius: 10px;
 }
 .img_block {
   margin-top: 100px;
@@ -701,6 +719,7 @@ position: relative;
       height: 130px;
       background-color: #2a1d1e;
       margin-top: 20px;
+      border-radius: 10px;
       position: relative;
       div {
         width: 70px;
@@ -823,7 +842,7 @@ position: relative;
   }
 }
 
-@media screen and (  max-width: 945px)  {
+@media screen and (  max-width: 946px)  {
   .header_content_block2_button{
     width: 50%;
     margin: auto;
@@ -833,7 +852,7 @@ position: relative;
   .header_content_block22{
     margin-top: -300px;
     position: relative;
-    height: 300px;
+  max-width: 90%;
   }
   .header_content{
     margin-top: -450px;
@@ -841,23 +860,22 @@ position: relative;
   }
   
   .header_content_block2{
-    height: 100px;
+    height: 300px;
   }
  
   .header_content_block22{
-    max-width: 70%;
+    max-width: 90%;
   }
  
-.content_BLOCK_block{
-    margin-top: 500px;
-  }
+
   .content_BLOCK{
     margin-top: 50px;
   }
   .content{
     margin-top: 100px;
   }
-}
+
+ }
 .footer_block {
 
   width: 100%;
@@ -942,6 +960,11 @@ position: relative;
 }
 
 @media screen and (max-width: 1198px) {
+ 
+  // .header_content{
+  //   margin-top: 400px;
+  // }
+  
   .content{
     display: grid;
     grid-template-columns: 2fr 2fr;
@@ -1018,6 +1041,13 @@ position: relative;
     margin-top: 350px;
   }
 }
+.header_content_block2{
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1180px){
+
+}
 
 @media screen and (max-width: 1034px) {
   
@@ -1055,7 +1085,7 @@ position: relative;
 }
 @media screen and (max-width: 1192px){
   .header_content_block22{
-    height: 500px;
+    height: 90%;
   }
 .header_content_block22_info{
 padding: 0;
@@ -1088,11 +1118,25 @@ p{
     grid-template-columns: 1fr 1fr;
   }
 }
+@media screen and (max-width:905px) {
+  .content_BLOCK_8_block_p{
+    margin: 0 auto;
+  }
+  .content_BLOCK_7_cards_info{
+    margin:  auto;
+  }
+  .content_BLOCK_7_block_p{
+    margin: 0 auto;
+  }
+}
 
 
 @media screen and (max-width: 952px) {
+  .children{
+  
+  }
   .header_content_block22{
-    margin: auto;
+    margin: 0 auto;
   }
   .children{
     margin-top: -800px;
@@ -1137,7 +1181,7 @@ margin: 0 auto;
     height: 300px;
   }
   .children{
-    margin-top: -750px;
+    margin-top: -650px;
   }
   .header_content_block22{
     height: 300px;
@@ -1145,7 +1189,7 @@ margin: 0 auto;
   }
 
   .content_BLOCK_block{
-    margin-top: 100px;
+ margin: 0 auto;
   }
   .header_content{
     display: block;
@@ -1328,12 +1372,22 @@ margin: 0 auto;
 }
 
 .content_BLOCK_block3{
-  margin-top: 120px;
+margin: 0;
+padding: 0;
 }
 
 .content_BLOCK_3{
   margin-top: -5px;
   padding-bottom: 20px;
+}
+
+@media screen and (max-width: 702px){
+  .header_content_block22{
+    max-width: 90%;
+    .header_content_block22_img{
+      max-width: 90%;
+    }
+  }
 }
 
 
