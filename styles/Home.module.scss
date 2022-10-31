@@ -399,7 +399,7 @@ bottom: 3px solid #d4d4d4;
 }
 .map_card_block2 {
   max-width: 200px;
-  height: 200px;
+  
   text-align: left;
   h2 {
     font-size: 16px;
@@ -852,7 +852,6 @@ position: relative;
     gap: 10px;
   }
   .header_content_block22{
-    
     position: relative;
   max-width: 90%;
   .header_content_block22_info{
@@ -1260,19 +1259,43 @@ margin-top: 150px;
 }
 
 @media screen and (max-width:572px ){
+
   .content{
     .map_card{
-      display: flex;
+      display: block;
+      width: 90%;
       gap: 10px;
+      margin: auto;
       margin-top: 50px;
-      .map_card{
+      .map_card_block1{
+        max-width: 100%;
+display: block;
+margin: 0 auto;
+      }
+      .map_card_block2{
+      max-width: 100%;
+      display: block;
+     
+    text-align: center;
+    
+    
+  div{
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+   p{
+    margin: 0;
+   }
+  }
+      }
         div{
           display: flex;
+          width: 100%;
           justify-content: center;
           gap: 10px;
         }
 
-      }
+    
   }
   }
   
