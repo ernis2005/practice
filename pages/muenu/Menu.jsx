@@ -11,8 +11,23 @@ import { TbMail } from "react-icons/tb";
 import { BsTelephone } from "react-icons/bs";
 import { FiMapPin } from "react-icons/fi";
 import Link from "next/link"
+import { motion,  } from "framer-motion"
 function Menu() {
   const [first, setfirst] = useState(true);
+  const left = {
+    initial: {
+      opacity: 0,
+      x: -100
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      },
+      x: 0
+    },
+
+  }
   return (
     <div className={s.menusss}>
       <div className={s.menu}>
@@ -22,12 +37,12 @@ function Menu() {
           <button className={s.bt}>KG</button>
           <button className={s.bt}>ENG</button>
         </div>
-     
             <MenuIcon onClick={() => setfirst(!first)} className={s.IconButton} />
-        
-        
       </div>
-      <div className={first ? s.bbtn : s.btn}>
+      <motion.div initial="initial"
+                    whileInView="animate"
+                    exit="initial"
+                    variants={left} className={first ? s.bbtn : s.btn}>
         <div className={s.menus}>
           
             <div className={s.menu3}>
@@ -125,7 +140,7 @@ function Menu() {
               </a>
             </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
