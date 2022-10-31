@@ -11,7 +11,7 @@ import { TbMail } from "react-icons/tb";
 import { BsPlay, BsTelephone } from "react-icons/bs";
 import { FiMapPin } from "react-icons/fi";
 import { SlArrowRight } from "react-icons/sl";
-
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { motion, AnimatePresence } from "framer-motion"
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -826,7 +826,13 @@ export default function Home({ data }) {
                 />
 
                 <div>
-                  <BsPlay className={styles.AiOutlinePauseCircle} />
+            
+              
+                <a href="https://youtu.be/DuAp8g5_y_Y" target="https://youtu.be/DuAp8g5_y_Y">
+                <BsPlay className={styles.AiOutlinePauseCircle}/> 
+                  </a>  
+                
+               
                 </div>
               </motion.div>
               <motion.div initial="initial"
