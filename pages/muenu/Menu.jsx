@@ -11,7 +11,7 @@ import { TbMail } from "react-icons/tb";
 import { BsTelephone } from "react-icons/bs";
 import { FiMapPin } from "react-icons/fi";
 import Link from "next/link"
-import { motion,  } from "framer-motion"
+import { AnimatePresence, motion,  } from "framer-motion"
 function Menu() {
   const [first, setfirst] = useState(true);
   const left = {
@@ -31,25 +31,34 @@ function Menu() {
   return (
     <div className={s.menusss}>
       <div className={s.menu}>
-        <Image width={250} height={100} src="/logo.png" alt="q" />
+        <div className={s.Image}>
+        <Image  width={230} height={100}  src="/logo.png" alt="q" />
+        </div>
+    
         <div className={s.language}>
           <button className={s.bt}>RUS</button>
           <button className={s.bt}>KG</button>
           <button className={s.bt}>ENG</button>
         </div>
-            <MenuIcon onClick={() => setfirst(!first)} className={s.IconButton} />
+
+            <MenuIcon onClick={() => setfirst(!first)} className={first ? s.IconButton : s.IconButton2}  />
       </div>
+      <AnimatePresence >
       <motion.div initial="initial"
                     whileInView="animate"
-                    exit="initial"
-                    variants={left} className={first ? s.bbtn : s.btn}>
+                    variants={left} 
+                    exit={{
+                      y:"-100%"
+                    }}
+                 
+                   className={first ? s.bbtn : s.btn}>
         <div className={s.menus}>
           
             <div className={s.menu3}>
            
               <Link href="/">ГЛАВНАЯ</Link>
               <details>
-                <summary>О НАС</summary>
+                <summary>О НАС</summary> 
                 <div className={s.menu_summary}>
                 <Link href="/aboutUs">О НАС</Link>
                       <p href="#">menu</p>
@@ -141,6 +150,8 @@ function Menu() {
             </div>
         </div>
       </motion.div>
+      </AnimatePresence>
+  
     </div>
   );
 }

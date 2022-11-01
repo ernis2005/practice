@@ -851,6 +851,26 @@ text-align: center;
 }
 
 @media screen and (max-width: 946px) {
+  .content_BLOCK_7 {
+    .content_BLOCK_7_block {
+      .content_BLOCK_7_block_p {
+        width: 90%;
+        text-align: center;
+      }
+    }
+  }
+  .content_BLOCK_8 {
+    .content_BLOCK_8_block_p {
+      width: 90%;
+      text-align: center;
+    }
+  }
+  .content_BLOCK_7_cards_info {
+    width: 90%;
+    margin-top: 10px;
+    padding-left: 20px;
+    justify-content: space-between;
+  }
   .header_content_block2_button {
     width: 50%;
     margin: auto;
@@ -1131,15 +1151,21 @@ text-align: center;
     grid-template-columns: 1fr 1fr;
   }
 }
-@media screen and (max-width: 905px) {
+@media screen and (max-width: 906px) {
+  
   .content_BLOCK_8_block_p {
     margin: 0 auto;
   }
   .content_BLOCK_7_cards_info {
     margin: auto;
+    margin-top: 10px;
   }
   .content_BLOCK_7_block_p {
     margin: 0 auto;
+  }
+  .content_BLOCK_7_block_cards{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
   }
 }
 
@@ -1179,13 +1205,16 @@ text-align: center;
 }
 
 @media screen and (max-width: 946px) {
+  .header_content_block2_button{
+    margin-top: 1pc;
+  }
   .header_content {
     display: block;
     .header_content_block2 {
       margin-top: 1pc;
       position: relative;
       .header_content_block2_button {
-        margin-top: 1pc;
+        margin-top: 2pc;
       }
     }
   }
@@ -1253,10 +1282,15 @@ text-align: center;
     display: block;
     width: 90%;
     .content_BLOCK_7_block_cards {
-      justify-content: space-around;
+     display: grid;
+     grid-template-columns: 2fr 2fr;
 
       div {
         width: 90%;
+        div{
+          
+          margin-left: 35%;
+        }
       }
     }
     .content_BLOCK_8_block_cards {
@@ -1490,6 +1524,24 @@ text-align: center;
   }
 }
 @media screen and (max-width: 418px) {
+  .content_BLOCK_7 {
+    display: block;
+    width: 90%;
+    .content_BLOCK_7_block_cards {
+ 
+
+      div {
+        width: 90%;
+        div{
+          
+          margin-left: 30%;
+        }
+      }
+    }
+    .content_BLOCK_8_block_cards {
+      justify-content: space-around;
+    }
+  }
   .content_BLOCK_7_block_p {
     width: 100%;
   }
